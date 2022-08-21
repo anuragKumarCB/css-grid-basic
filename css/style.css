@@ -10,10 +10,8 @@ body{
     max-width: 960px;                                       /*max width for div container*/
     margin: 0 auto;                                         /*pushing div to the center*/
     display: grid;                                          /*making div a grid*/
-    grid-template-columns: repeat(3, 1fr);                  /*defines column number and width */
-    /* reapeat as the word says it repeats (first value column number, second width of column) */
-    grid-template-rows: repeat(3, minmax(200px, auto));     /*defines row number and height */
-    /* reapeat as the word says it repeats (first value row number, second is minmax( first is minimum height, second is maximum)) */
+    grid-template-columns: repeat(6, 1fr);                  /*defines column number and width */        /* reapeat as the word says it repeats (first value column number, second width of column) */    
+    grid-template-rows: repeat(4, minmax(200px, auto));     /*defines row number and height */      /* reapeat as the word says it repeats (first value row number, second is minmax( first is minimum height, second is maximum)) */  
     grid-column-gap: 10px;                                  /*defines column gap (margin) */
     grid-row-gap: 10px;                                     /*defines row gap (margin) */
     grid-gap: 10px;                                         /* grid column/row gap does not stack with grid gap */
@@ -24,4 +22,30 @@ body{
 }
 .content div:nth-child(even){
     background-color: #777;
+}
+
+/* grid line-height style */
+
+.one{
+    /* grid-column-start: 1;
+    grid-column-end: 3;             //instead of using these two tag there is short hand tag */
+    grid-column: 1 / 3;
+}
+.two{
+    grid-column: 3 / 7;
+}
+.three{
+    grid-column: 1 / 4;
+    grid-row: 2/ 4;
+}
+.four{
+    grid-column: 4 / 7;
+    grid-row: 2 / 4;
+}
+.five{
+    grid-column: 3 / 7;
+}
+.six{
+    grid-row: 4;
+    grid-column: 1 / 3;
 }
