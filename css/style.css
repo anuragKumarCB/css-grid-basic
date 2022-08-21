@@ -11,7 +11,9 @@ body{
     margin: 0 auto;                                         /*pushing div to the center*/
     display: grid;                                          /*making div a grid*/
     grid-template-columns: repeat(3, 1fr);                  /*defines column number and width */
-    /* reapeat as the word says it repeats (first value column number, second widht of column) */
+    /* reapeat as the word says it repeats (first value column number, second width of column) */
+    grid-template-rows: repeat(3, minmax(200px, auto));     /*defines row number and height */
+    /* reapeat as the word says it repeats (first value row number, second is minmax( first is minimum height, second is maximum)) */
 }
 .content div{
     background-color: #3bbced;
