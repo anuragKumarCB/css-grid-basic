@@ -14,6 +14,9 @@ body{
     /* reapeat as the word says it repeats (first value column number, second width of column) */
     grid-template-rows: repeat(3, minmax(200px, auto));     /*defines row number and height */
     /* reapeat as the word says it repeats (first value row number, second is minmax( first is minimum height, second is maximum)) */
+    grid-column-gap: 10px;                                  /*defines column gap (margin) */
+    grid-row-gap: 10px;                                     /*defines row gap (margin) */
+    grid-gap: 10px;                                         /* grid column/row gap does not stack with grid gap */
 }
 .content div{
     background-color: #3bbced;
