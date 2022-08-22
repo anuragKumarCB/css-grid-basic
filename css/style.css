@@ -14,7 +14,8 @@ body{
     grid-template-rows: repeat(9, minmax(200px, auto));     /*defines row number and height */      /* reapeat as the word says it repeats (first value row number, second is minmax( first is minimum height, second is maximum)) */  
     grid-column-gap: 10px;                                  /*defines column gap (margin) */
     grid-row-gap: 10px;                                     /*defines row gap (margin) */
-    /* grid-gap: 10px;                                         grid column/row gap does not stack with grid gap */
+    /* grid-gap: 10px;                                        only grid-gap / gap will work in case of all 4 properties */
+    gap: 10px;
 }
 .content div{
     background-color: #3bbced;
@@ -52,8 +53,8 @@ body{
 
 /* new div group style */
 .nestHeading{
-    /* grid-column: 1 / 7; */
-    grid-column: span 7;                /* span means 1 */
+    grid-column: 1 / 7;
+    /* grid-column: span 7;                 */
 }
 .seven{
     grid-column: 1 / 3;
@@ -80,4 +81,58 @@ body{
     border: 1px solid white;
     margin: 0;
     padding: 60px;
+}
+
+/* span */
+span{
+    display: block;
+    margin: 0 auto;
+    max-width: 165px;
+    padding: 20px;
+    background-color: #777;
+    color: white;
+}
+/* content2 grid style */
+
+.content2{
+    
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, minmax(200px, auto));
+    gap: 10px;
+    /* align-items: start;                          works on vertical or column */
+    /* justify-items: center                        workd on horizontal or row */
+}
+.content2 div{
+    padding: 30px;
+    background-color: #3bbced;
+}
+.content2 div:nth-child(even){
+    background-color: #777;
+}
+.ct-one{
+    align-self: end;
+    justify-self: end;
+}
+.ct-two{
+    align-self: center;
+    justify-self: center;
+}
+.ct-three{
+    align-self: start;
+    justify-self: start;
+}
+.ct-four{
+    align-self: start;
+    justify-self: end;
+}
+.ct-five{
+    align-self: center;
+    justify-self: center;
+}
+.ct-six{
+    align-self: end;
+    justify-self: start;
 }
