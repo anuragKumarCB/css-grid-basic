@@ -1,8 +1,8 @@
 // on-click div color should change to that color
-// for that you have to select all divs and save it to const for dry-code
+// for that you have to select all divs (using querySelectorAll)and save it to const for dry-code
 const allDiv = document.querySelectorAll('.divColor');
 
-// trigger-program
+// trigger-program (by clicking on color from color picker, so selected by className)
 document.querySelector('.originalColor').addEventListener('click', originalColor);
 document.querySelector('.secondColor').addEventListener('click', secondColor);
 document.querySelector('.thirdColor').addEventListener('click', thirdColor);
@@ -16,6 +16,7 @@ document.querySelector('.tenthColor').addEventListener('click', tenthColor);
 document.querySelector('.eleventhColor').addEventListener('click', eleventhColor);
 document.querySelector('.twelvethColor').addEventListener('click', twelvethColor);
 
+// function for eachColor
 function originalColor(){
     allDiv.forEach(addColor =>{
         addColor.style.backgroundColor = 'rgb(6, 216, 125)';
