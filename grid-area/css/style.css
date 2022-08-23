@@ -1,0 +1,44 @@
+body{
+    color: #fff;
+    text-align: center;
+}
+.content{
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 10px;
+    /* You can use characters assign for grid areas in pattern you want your content / elements to be look. */
+    grid-template-areas: 
+    "header header header header"
+    "aside aside main main"
+    "nav nav main main"
+    "section section section section"
+    "section section section section"
+    "footer footer footer footer";
+}
+.content > *{
+    padding: 30px;
+    background-color: turquoise;
+}
+header{
+    /* grid-area is basically like a variable or name for that content */
+    /* you can use grid-area name to create look of your template just line colum / row line*/
+    grid-area: header;
+}
+main{
+    grid-area: main;
+}
+section{
+    grid-area: section;
+}
+aside{
+    grid-area: aside;
+}
+nav{
+    grid-area: nav;
+}
+footer{
+    grid-area: footer;
+}
